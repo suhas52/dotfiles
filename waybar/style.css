@@ -2,7 +2,6 @@
     font-family: JetBrainsMono;
     font-size: 13px;
     min-height: 0;
-    color: white;
 }
 
 window#waybar {
@@ -15,6 +14,7 @@ window#waybar {
     margin-right: 10px;
     margin-left: 25px;
 }
+
 
 #workspaces button{
     border-radius: 15px;
@@ -48,5 +48,12 @@ window#waybar {
 #idle_inhibitor,
 #network {
 	padding: 0 10px;
+	color: white;
 }
 
+
+#custom-pomodoro {
+  color: white;
+  background: #333;
+  padding: 0 8px;
+}

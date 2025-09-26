@@ -238,7 +238,4 @@ client.placeholder      #222222 #222222 #ffffff #222222 #222222
 
 gaps inner 3
 gaps outer 3
-exec_always swayidle -w \
-    timeout 150 'swaymsg "output * dpms off"' \
-    resume 'swaymsg "output * dpms on"'
-exec_always copyq
+exec dbus-run-session /home/suhas/.local/bin/autotiling

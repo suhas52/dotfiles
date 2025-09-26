@@ -132,7 +132,7 @@
     "exec": "echo '{\"class\": \"audio recording\"}'",
     "exec-if": "pgrep ffmpeg",
 },
-}
+
 "custom/pomodoro": {
 	"format": "{}",
 	"return-type": "json",
@@ -140,3 +140,4 @@
 	"on-click": "waybar-module-pomodoro toggle",
 	"on-click-right": "waybar-module-pomodoro reset",
 },
+}
