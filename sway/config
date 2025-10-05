@@ -20,12 +20,10 @@ set $term foot
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 # Recommends: rofi-wayland
-set $rofi_cmd rofi \
-        -terminal '$term'
 # Shows a combined list of the applications with desktop files and
 # executables from PATH.
 # TODO: add window with the next release of rofi-wayland
-set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
+#set $menu $wofi -show run
 
 ### Output configuration
 #
@@ -77,7 +75,7 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+d exec wofi --show run
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -242,3 +240,7 @@ exec_always swayidle -w \
     timeout 150 'swaymsg "output * dpms off"' \
     resume 'swaymsg "output * dpms on"'
 exec_always copyq
+exec waybar
+bar { 
+     swaybar_command waybar
+}
